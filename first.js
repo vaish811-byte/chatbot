@@ -1,18 +1,14 @@
-async function call(prompt,context)
+let btn=document.querySelector("button");
+
+//let prompt="explain in brief in 3 to 4 lines";
+async function get()
 {
-    let promise=await fetch(`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=2046c535afeb092fo82f1d306d8a2b2t`);
-    document.getElementById('h3').innerHTML="fetching......";
-    let str=await promise.json();
-    console.log(str.answer);
-    document.getElementById('h3').innerHTML=str.answer;
-   
-    
-}
-function get()
-{
-let str=document.getElementById('ipt').value;
-console.log(str);
-call(str,"explain in brief");
+    let str=document.getElementById('ipt').value;
+    let prompt="explain in brief in 8 lines";
+   let promise=await fetch(`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${str}&key=2046c535afeb092fo82f1d306d8a2b2t`);
+   let result=await promise.json();
+   document.getElementById('h2').innerText=result.answer;
+   console.log(result.answer);
 
 }
-
+btn.addEventListener("click",get);
