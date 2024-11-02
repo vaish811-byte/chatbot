@@ -1,14 +1,32 @@
-let btn=document.querySelector("button");
+let btn = document.querySelector("button");
 
-//let prompt="explain in brief in 3 to 4 lines";
-async function get()
-{
-    let str=document.getElementById('ipt').value;
-    let prompt="explain in brief in 8 lines";
-   let promise=await fetch(`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${str}&key=2046c535afeb092fo82f1d306d8a2b2t`);
-   let result=await promise.json();
-   document.getElementById('h2').innerText=result.answer;
-   console.log(result.answer);
-
+async function get() {
+    let str = document.getElementById('ipt').value;
+    let prompt = "Explain in brief in 8 lines";
+    let resultDisplay = document.getElementById('h2');
+    
+    // Show loading message
+    resultDisplay.innerText = "Loading, please wait...";
+    
+    try {
+        let response = await fetch(`https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(prompt)}&context=${encodeURIComponent(str)}&key=YOUR_SECURE_KEY`);
+        
+        // Check if the response is ok (status 200-299)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        
+        // Parse the response
+        let result = await response.json();
+        
+        // Display the AI-generated answer
+        resultDisplay.innerText = result.answer;
+        console.log(result.answer);
+    } catch (error) {
+        console.error("Error:", error);
+        resultDisplay.innerText = "An error occurred. Please try again.";
+    }
 }
-btn.addEventListener("click",get);
+
+// Add event listener to the button
+btn.addEventListener("click", get);
