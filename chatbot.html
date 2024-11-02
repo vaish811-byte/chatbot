@@ -5,65 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
-            height:400px;
-            width:900px;
-            margin-left:50px;
-            border-radius:25px;
-            background-color: aqua;
-        }
-        h1{
-            text-align: center;
-        }
-        input{
-            height:50px;
-            width:400px;
+h1{
+    color:blue;
+   margin-left:35%;
+    
+}
+        .first
+        {
+            height: 500px;
+            width:1000px;
+            background-color: bisque;
             border-radius: 12px;
-            text-align: center;
-            margin-left:200px;
+            padding:12px;
+            text-align:center;
+            margin-left:7%;
+            margin-top:30px;
+        }
+        .second
+        {
+            display: flex;
+
+        }input{
+            height:30px;
+            width:400px;
+            color:blue;
+            background-color:yellow;
+            border-radius:5px;
+           margin-left: 150px;
+
+text-align: center;
         }
         button{
-            height:50px;
+            height:30px;
             width:100px;
-            color: antiquewhite;
-            background-color: blue;
-            border-radius: 12px;
-        }
-        h2{
-            text-align: center;
-            margin-left: 12px;
-            margin-top:12px;
-            color:brown;
-        }
-        h3{
-            text-align: center;
-            margin-left: 12px;
-            margin-top:12px;
             color:blue;
-        }
-        #h3
-        {
-            text-align: center;
+            background-color:yellow;
+            border-radius:12px;
             margin-left: 12px;
-            margin-top:30px;
-            color:red;
 
         }
-       
+        h2{
+            margin-top:20px;
+            color:red;
+        }
     </style>
 </head>
 <body>
-    <h1>Health and Well being</h1>
-    <div>
-        <h2>Welcome to health.com</h2>
-        <h3>
-        You can ask your queries if any
-        </h3>
-        <input type="search" placeholder="type here" id="ipt">
-        
-        <button >See results</button>
-        <h3 id="h3"></h3>
-    </div>
-    <script src="first.js"></script>
+   <h1>ChatBot</h1>
+   <div class="first">
+    <h2>Hello I'm your Ayurveda Chatbot,and I'm here to help you</h2>
+    <div class="second">
+    <input type="search" placeholder="search here"id='ipt'>
+    <button>See results</button>
+</div>
+    <h2 id="h2">
+      
+    </h2>
+   </div>
+   <script src="first.js"></script>
 </body>
 </html>
