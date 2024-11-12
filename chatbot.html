@@ -6,30 +6,116 @@
     <title>Ayurveda HealthBot - Your Wellness Guide</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-            
-      
-   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet"> <!-- Stylish font -->
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container-custom {
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-ask {
+            width: 100px;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9f7ef;
+            border: 1px solid #d4edda;
+            border-radius: 5px;
+        }
+        #h3 {
+            color: #6c757d;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .name-style {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .email-style {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: #f8f9fa;
+        }
+    </style>
 </head>
 <body>
+    <!-- Navbar for Vultr Services -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Vultr Cloud Services</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.vultr.com/products/cloud-compute/">Cloud Compute</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.vultr.com/products/block-storage/">Block Storage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.vultr.com/products/load-balancers/">Load Balancers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.vultr.com/products/kubernetes/">Kubernetes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.vultr.com/products/vultr-object-storage/">Object Storage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.vultr.com/locations/">Data Centers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.vultr.com/docs/">Documentation</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
     <div class="container mt-5">
-        <h1>Ayurveda HealthBot</h1>
+        <div class="text-center mb-4">
+            <h1 class="display-4">Ayurveda HealthBot</h1>
+            <p class="lead">Your Personal Wellness Guide</p>
+        </div>
         <div class="container-custom mx-auto">
-            <h2>Welcome to Your Wellness Guide</h2>
-            <h3>Ask any health-related query and get answers based on Ayurveda</h3>
-            <div class="input-group">
+            <h2 class="mb-3 text-center">Welcome to Your Wellness Guide</h2>
+            <h5 class="text-muted text-center mb-4">Ask any health-related query and get answers based on Ayurveda</h5>
+            <div class="input-group mb-3">
                 <input type="text" class="form-control" id="ipt" placeholder="Type your question here">
                 <button class="btn btn-success btn-ask" onclick="get()">Ask</button>
             </div>
-            <h3 id="h3">Waiting for your query...</h3>
-            <h3 id="result"></h3>
+            <div class="text-center">
+                <h5 id="h3">Waiting for your query...</h5>
+                <h3 id="result" class="text-success"></h3>
+            </div>
         </div>
     </div>
 
+    <!-- Footer Section -->
+    <footer class="bg-primary text-white text-center py-3">
+        <p class="name-style">By Vaishnavi Nigam & Disha Sahu</p>
+        <p class="email-style">Contact us: <a href="mailto:vaishnavinigam67@gmail.com" class="text-white">vaishnavinigam67@gmail.com</a></p>
+        <p>Powered by <a href="https://www.vultr.com" class="text-white" target="_blank">Vultr Cloud Services</a></p>
+    </footer>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js">
-       
-    </script>
+   <script src="script.js"></script>
+
 </body>
 </html>
